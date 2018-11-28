@@ -4,3 +4,4 @@ sudo apt-get --assume-yes install python3
 sudo apt-get --assume-yes install python3-pip
 pip3 install pyrebase
 pip3 install Flask
+python3 run_app.py
