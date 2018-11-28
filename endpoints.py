@@ -22,6 +22,11 @@ def create_task():
         status = 404
     return make_response(content, status, {'Content-Type': 'application/json'})
 
+@app.route('/healthcheck', methods=['POST'])
+def healthcheck():
+    content = json.dumps({"response": "ok"})
+    return make_response(content, 200, {'Content-Type': 'application/json'})
+
 
 @app.route('/task/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
